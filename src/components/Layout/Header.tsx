@@ -1,99 +1,107 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, Facebook, Instagram, Twitter, Linkedin, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-
+  
+  // Handle scroll event to change header style
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
-
+    
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    // Prevent scroll when menu is open
+    if (!isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   };
-
+  
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+  
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-white py-4'}`}>
-      {/* Top Bar with Contact Info and Social Media */}
-      <div className="container-custom">
-        <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
-          {/* Contact Information */}
-          <div className="flex flex-col md:flex-row md:space-x-6 text-sm text-gray-600 mb-2 md:mb-0 items-center">
-            <a href="mailto:contato@contabilidade.com" className="flex items-center hover:text-amber-500 transition-colors duration-300 mb-1 md:mb-0">
-              <Mail size={16} className="mr-2" />
-              contato@contabilidade.com
-            </a>
-            <a href="tel:+5511987654321" className="flex items-center hover:text-amber-500 transition-colors duration-300 whitespace-nowrap">
-              <Phone size={16} className="mr-2" />
-              (11) 98765-4321
-            </a>
-          </div>
-          
-          {/* Social Media Icons */}
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              <Facebook size={18} />
-            </a>
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              <Instagram size={18} />
-            </a>
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              <Twitter size={18} />
-            </a>
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              <Linkedin size={18} />
-            </a>
-          </div>
-        </div>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        {/* Logo */}
+        <a href="#" className="flex items-center">
+          <img 
+            src="/lovable-uploads/813a4f65-6eae-4172-af4c-6ef4c01d96f3.png" 
+            alt="RRCM Construtora" 
+            className={`transition-all ${isScrolled ? 'h-12' : 'h-16'} w-auto`}
+          />
+        </a>
         
-        {/* Main Navigation */}
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-semibold text-amber-500 transition-all duration-300 transform hover:scale-[1.02]">
-            ContaPlus
-          </Link>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-8">
+          <a href="#" className="nav-link text-lg font-medium">Início</a>
+          <a href="#services" className="nav-link text-lg font-medium">Serviços</a>
+          <a href="#about" className="nav-link text-lg font-medium">Quem Somos</a>
+          <a href="#team" className="nav-link text-lg font-medium">Equipe</a>
+          <a href="#contact" className="nav-link text-lg font-medium">Contato</a>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-1">
-            <Link to="/" className="nav-link">Início</Link>
-            <a href="#about" className="nav-link">Sobre Nós</a>
-            <a href="#services" className="nav-link">Serviços</a>
-            <a href="#contact" className="nav-link">Contato</a>
-          </nav>
-          
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-gray-600 hover:text-amber-500 focus:outline-none"
-            onClick={toggleMobileMenu}
+          <a 
+            href="https://wa.me/5584996877697" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-2 rounded-md transition-all hover:scale-105"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+            Solicitar Orçamento
+          </a>
+        </nav>
+        
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden text-gray-700 p-2 focus:outline-none"
+          onClick={toggleMenu}
+          aria-label="Menu"
+        >
+          {isMenuOpen ? (
+            <X size={28} />
+          ) : (
+            <Menu size={28} />
+          )}
+        </button>
       </div>
       
-      {/* Mobile Navigation Menu */}
-      <div className={`md:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}>
-        <div className="container-custom py-4 flex flex-col space-y-3 border-t mt-4">
-          <Link to="/" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Início</Link>
-          <a href="#about" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Sobre Nós</a>
-          <a href="#services" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Serviços</a>
-          <a href="#contact" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Contato</a>
+      {/* Mobile Menu */}
+      <div 
+        className={`fixed inset-0 bg-white z-40 pt-20 px-4 md:hidden transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+      >
+        <div className="flex flex-col space-y-6 mt-4">
+          <a href="#" onClick={closeMenu} className="text-xl font-medium text-gray-900 py-2 border-b border-gray-200">Início</a>
+          <a href="#services" onClick={closeMenu} className="text-xl font-medium text-gray-900 py-2 border-b border-gray-200">Serviços</a>
+          <a href="#about" onClick={closeMenu} className="text-xl font-medium text-gray-900 py-2 border-b border-gray-200">Quem Somos</a>
+          <a href="#team" onClick={closeMenu} className="text-xl font-medium text-gray-900 py-2 border-b border-gray-200">Equipe</a>
+          <a href="#contact" onClick={closeMenu} className="text-xl font-medium text-gray-900 py-2 border-b border-gray-200">Contato</a>
+          
+          <a 
+            href="https://wa.me/5584996877697" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-3 rounded-md text-center"
+          >
+            Solicitar Orçamento
+          </a>
         </div>
       </div>
     </header>
