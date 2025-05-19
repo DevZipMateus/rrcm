@@ -10,20 +10,7 @@ const team = [
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80',
     delay: '0s'
   },
-  {
-    id: 2,
-    name: 'Rodolfo Rêgo',
-    role: 'Gestor de Produção',
-    image: 'https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-    delay: '0.1s'
-  },
-  {
-    id: 3,
-    name: 'Julyamilla Maria',
-    role: 'Engenharia',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
-    delay: '0.2s'
-  }
+
 ];
 
 const Team = () => {
