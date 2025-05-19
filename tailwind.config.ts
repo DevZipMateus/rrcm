@@ -63,12 +63,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				corporate: {
-					blue: '#1a1a1a', // Black for primary elements (60%)
-					lightBlue: '#d4af37', // Gold for secondary elements (30%)
-					darkBlue: '#111111', // Darker black for variation (60%)
+					blue: '#005486', // Darker blue from logo
+					lightBlue: '#0086c3', // Original blue from logo
+					darkBlue: '#003b5c', // Even darker blue variation
 					gray: '#f8f9fa', // Light background
 					darkGray: '#343a40', // Dark text
-					accent: '#a67c00', // Darker gold for accents (10%)
+					accent: '#e67e22', // Darker orange
 				}
 			},
 			borderRadius: {
