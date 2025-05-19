@@ -6,7 +6,7 @@ const Hero = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-[#0086c3] to-[#00537a] relative overflow-hidden">
+    <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-[#005486] to-[#00537a] relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80')] bg-cover bg-center opacity-10"></div>
       
       {/* Decorative elements */}
@@ -31,7 +31,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{
           animationDelay: '0.3s'
           }}>
-            <a href="https://wa.me/5584996877697" target="_blank" rel="noopener noreferrer" className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2">
+            <a href="https://wa.me/5584996877697" target="_blank" rel="noopener noreferrer" className="bg-[#e67e22] hover:bg-[#d35400] text-white px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2">
               <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
               <span>Solicitar Orçamento</span>
             </a>

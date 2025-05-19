@@ -63,7 +63,7 @@ const Header = () => {
             href="https://wa.me/5584996877697" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-2 rounded-md transition-all hover:scale-105"
+            className="bg-[#e67e22] hover:bg-[#d35400] text-white font-medium px-6 py-2 rounded-md transition-all hover:scale-105"
           >
             Solicitar Orçamento
           </a>
@@ -87,6 +87,15 @@ const Header = () => {
       <div 
         className={`fixed inset-0 bg-white z-40 pt-20 px-4 md:hidden transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
+        {/* Close button */}
+        <button 
+          className="absolute top-4 right-4 text-gray-700 p-2 rounded-full hover:bg-gray-100 focus:outline-none"
+          onClick={closeMenu}
+          aria-label="Fechar menu"
+        >
+          <X size={24} />
+        </button>
+        
         <div className="flex flex-col space-y-6 mt-4">
           <a href="#" onClick={closeMenu} className="text-xl font-medium text-gray-900 py-2 border-b border-gray-200">Início</a>
           <a href="#services" onClick={closeMenu} className="text-xl font-medium text-gray-900 py-2 border-b border-gray-200">Serviços</a>
@@ -98,7 +107,7 @@ const Header = () => {
             href="https://wa.me/5584996877697" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-amber-500 hover:bg-amber-600 text-white font-medium px-6 py-3 rounded-md text-center"
+            className="bg-[#e67e22] hover:bg-[#d35400] text-white font-medium px-6 py-3 rounded-md text-center"
           >
             Solicitar Orçamento
           </a>
