@@ -55,7 +55,7 @@ const FloatingButton = () => {
       <button
         onClick={toggleMenu}
         className={`${isMobile ? 'p-3' : 'p-4'} rounded-full flex items-center justify-center transition-all duration-300 
-          ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-[#0086c3] hover:bg-[#00537a]'} 
+          ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-[#25D366] hover:bg-[#20BD5C]'} 
           ${isOpen ? 'text-white' : 'text-white'} 
           ${isPulsing && !isOpen ? 'animate-pulse' : ''}
           transform hover:scale-105 active:scale-95 shadow-lg`}
@@ -63,14 +63,14 @@ const FloatingButton = () => {
         style={{
           boxShadow: isOpen 
             ? '0 4px 12px rgba(239, 68, 68, 0.4)' 
-            : '0 4px 12px rgba(0, 134, 195, 0.4)'
+            : '0 4px 12px rgba(37, 211, 102, 0.4)'
         }}
       >
         {isOpen ? (
           <X size={isMobile ? 18 : 22} />
         ) : (
           <div className={`${isMobile ? 'w-5 h-5' : 'w-6 h-6'}`}>
-            <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-full h-full object-contain" />
+            <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-full h-full object-contain" />
           </div>
         )}
       </button>
