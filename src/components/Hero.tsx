@@ -1,12 +1,8 @@
-
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
-
 const Hero = () => {
   const isMobile = useIsMobile();
-  
-  return (
-    <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-[#005486] to-[#00537a] relative overflow-hidden">
+  return <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-[#005486] to-[#00537a] relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80')] bg-cover bg-center opacity-10"></div>
       
       {/* Decorative elements */}
@@ -18,19 +14,19 @@ const Hero = () => {
           
           <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-white leading-tight mb-6 animate-fade-in`} style={{
           animationDelay: '0.1s'
-          }}>
+        }}>
             Construindo o futuro hoje.
           </h1>
           
-          <p className="text-lg text-amber-200 mb-10 animate-fade-in" style={{
+          <p style={{
           animationDelay: '0.2s'
-          }}>
+        }} className="text-lg mb-10 animate-fade-in text-gray-50">
             Soluções completas em construção civil para realizar seus sonhos e projetos. Qualidade, segurança e inovação em cada obra.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{
           animationDelay: '0.3s'
-          }}>
+        }}>
             <a href="https://wa.me/5584996877697" target="_blank" rel="noopener noreferrer" className="bg-[#e67e22] hover:bg-[#d35400] text-white px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2">
               <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
               <span>Solicitar Orçamento</span>
@@ -49,8 +45,6 @@ const Hero = () => {
           </path>
         </svg>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
