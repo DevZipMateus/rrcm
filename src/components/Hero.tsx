@@ -1,7 +1,10 @@
+
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+
 const Hero = () => {
   const isMobile = useIsMobile();
+  
   return <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-[#005486] to-[#00537a] relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80')] bg-cover bg-center opacity-10"></div>
       
@@ -11,6 +14,17 @@ const Hero = () => {
       
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
+          
+          {/* Added logo above the text */}
+          <div className="flex justify-center mb-8 animate-fade-in" style={{
+            animationDelay: '0.05s'
+          }}>
+            <img 
+              src="/lovable-uploads/813a4f65-6eae-4172-af4c-6ef4c01d96f3.png" 
+              alt="RRCM Construtora" 
+              className="w-auto h-40 md:h-48 lg:h-56"
+            />
+          </div>
           
           <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-white leading-tight mb-6 animate-fade-in`} style={{
           animationDelay: '0.1s'
@@ -47,4 +61,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
