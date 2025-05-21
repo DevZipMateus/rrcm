@@ -86,7 +86,7 @@ const Contact = () => {
         <div className="mt-12 max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-sm overflow-hidden">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.864834518431!2d-35.2052628!3d-5.8046952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff9a2a0ac851%3A0x3ff826da1cb0f1d5!2sAv.%20Xavier%20da%20Silveira%2C%20377%20-%20Tirol%2C%20Natal%20-%20RN%2C%2059020-170!5e0!3m2!1spt-BR!2sbr!4v1684358957793!5m2!1spt-BR!2sbr" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.2675908733227!2d-35.27341238582767!3d-5.688252444950637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwNDEnMTcuOCJTIDM1wrAxNicxNi40Ilc!5e0!3m2!1spt-BR!2sbr!4v1684358957793!5m2!1spt-BR!2sbr" 
               width="100%" 
               height="450" 
               style={{ border: 0 }} 
@@ -109,7 +109,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
-                <p className="text-neutral-600">Avenida Xavier da Silveira, 377/ Tirol Office, Tirol - Natal</p>
+                <p className="text-neutral-600">Rua Alcides de Araújo, Extremoz - CEP: 59575000</p>
               </div>
             </div>
             
