@@ -42,14 +42,6 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Logo */}
-        <a href="#" className="flex items-center">
-          <img 
-            src="/lovable-uploads/813a4f65-6eae-4172-af4c-6ef4c01d96f3.png" 
-            alt="RRCM Construtora" 
-            className={`transition-all ${isScrolled ? 'h-12' : 'h-16'} w-auto`}
-          />
-        </a>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
