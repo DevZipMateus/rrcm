@@ -1,9 +1,13 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import { useIsMobile } from '../hooks/use-mobile';
+import { useIsMobile } from '@/hooks/use-mobile';
+
 const Contact = () => {
   const isMobile = useIsMobile();
-  return <section id="contact" className="section bg-neutral-100">
+  
+  return (
+    <section id="contact" className="section bg-neutral-100">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -23,44 +27,61 @@ const Contact = () => {
           {/* WhatsApp Card */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in">
             <div className="bg-emerald-500 p-6 flex items-center justify-center">
-              <img alt="WhatsApp" className="w-16 h-16" src="/lovable-uploads/e29bda76-19d7-4d97-a388-a5a16c72e9b2.png" />
+              <img 
+                alt="WhatsApp" 
+                className="w-16 h-16" 
+                src="/lovable-uploads/e29bda76-19d7-4d97-a388-a5a16c72e9b2.png" 
+              />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">WhatsApp</h3>
               <p className="text-neutral-600 mb-4">Atendimento rápido e prático</p>
-              <a href="https://wa.me/5584996877697" target="_blank" rel="noopener noreferrer" className="bg-[#0086c3] hover:bg-[#00537a] text-white px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium">
+              <a 
+                href="https://wa.me/5584996877697" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-[#0086c3] hover:bg-[#00537a] text-white px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
+              >
                 <span>Enviar mensagem</span>
               </a>
             </div>
           </div>
           
           {/* Phone Card */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
-          animationDelay: '0.1s'
-        }}>
+          <div 
+            className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" 
+            style={{ animationDelay: '0.1s' }}
+          >
             <div className="bg-[#0086c3] p-6 flex items-center justify-center">
               <Phone className="w-16 h-16 text-white" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">Telefone</h3>
               <p className="text-neutral-600 mb-4">Fale diretamente conosco</p>
-              <a href="tel:+5584996877697" className="bg-[#0086c3] hover:bg-[#00537a] text-white px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium">
+              <a 
+                href="tel:+5584996877697" 
+                className="bg-[#0086c3] hover:bg-[#00537a] text-white px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
+              >
                 <span>(84) 99687-7697</span>
               </a>
             </div>
           </div>
           
           {/* Email Card */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
-          animationDelay: '0.2s'
-        }}>
+          <div 
+            className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" 
+            style={{ animationDelay: '0.2s' }}
+          >
             <div className="bg-[#005486] p-6 flex items-center justify-center">
               <Mail className="w-16 h-16 text-white" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">E-mail</h3>
               <p className="text-neutral-600 mb-4">Envie sua mensagem</p>
-              <a href="mailto:rrservicosemanutencoes22@gmail.com" className="bg-[#0086c3] hover:bg-[#00537a] text-white px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium">
+              <a 
+                href="mailto:rrservicosemanutencoes22@gmail.com" 
+                className="bg-[#0086c3] hover:bg-[#00537a] text-white px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
+              >
                 <span>Enviar e-mail</span>
               </a>
             </div>
@@ -70,9 +91,17 @@ const Contact = () => {
         {/* Map */}
         <div className="mt-12 max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.2675908733227!2d-35.27341238582767!3d-5.688252444950637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwNDEnMTcuOCJTIDM1wrAxNicxNi40Ilc!5e0!3m2!1spt-BR!2sbr!4v1684358957793!5m2!1spt-BR!2sbr" width="100%" height="450" style={{
-            border: 0
-          }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="RRCM Construtora - Localização" className="w-full"></iframe>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.2675908733227!2d-35.27341238582767!3d-5.688252444950637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwNDEnMTcuOCJTIDM1wrAxNicxNi40Ilc!5e0!3m2!1spt-BR!2sbr!4v1684358957793!5m2!1spt-BR!2sbr" 
+              width="100%" 
+              height="450" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade" 
+              title="RRCM Construtora - Localização" 
+              className="w-full"
+            />
           </div>
         </div>
         
@@ -112,6 +141,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
