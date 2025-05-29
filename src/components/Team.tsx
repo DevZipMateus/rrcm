@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Mail } from 'lucide-react';
+
 const team = [{
   id: 1,
   name: 'Romulo Rêgo',
@@ -12,7 +14,14 @@ const team = [{
   role: 'Gestor de produção',
   image: '/lovable-uploads/e651706d-cfce-4bd5-80aa-8ae84f1f7ccd.png',
   delay: '0.1s'
+}, {
+  id: 3,
+  name: 'Julyamilla Oliveira',
+  role: 'Engenheira',
+  image: '/lovable-uploads/f6cb11f9-7957-4772-b33e-77c20bf338b6.png',
+  delay: '0.2s'
 }];
+
 const Team = () => {
   return <section id="team" className="section bg-white">
       <div className="container-custom">
@@ -29,14 +38,14 @@ const Team = () => {
           </p>
         </div>
         
-        {/* Team Grid - Two Cards Side by Side */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* Team Grid - Three Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {team.map(member => <div key={member.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in" style={{
           animationDelay: member.delay
         }}>
               {/* Image */}
               <div className="relative overflow-hidden h-72">
-                <img src={member.image} alt={member.name} className="w-full h-full transition-transform duration-500 hover:scale-105 object-scale-down" />
+                <img src={member.image} alt={member.name} className="w-full h-full transition-transform duration-500 hover:scale-105 object-cover" />
               </div>
               
               {/* Content */}
@@ -59,4 +68,5 @@ const Team = () => {
       </div>
     </section>;
 };
+
 export default Team;
