@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const team = [{
@@ -11,7 +10,7 @@ const team = [{
   id: 2,
   name: 'Rodolfo Rêgo',
   role: 'Gestor de produção',
-  image: '/lovable-uploads/e651706d-cfce-4bd5-80aa-8ae84f1f7ccd.png',
+  image: '/lovable-uploads/db6f46f1-bb36-4885-9f44-de1eb7290658.png',
   delay: '0.1s'
 }, {
   id: 3,
