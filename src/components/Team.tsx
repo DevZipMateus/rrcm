@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { Mail } from 'lucide-react';
-
 const team = [{
   id: 1,
   name: 'Romulo Rêgo',
@@ -21,7 +19,6 @@ const team = [{
   image: '/lovable-uploads/f6cb11f9-7957-4772-b33e-77c20bf338b6.png',
   delay: '0.2s'
 }];
-
 const Team = () => {
   return <section id="team" className="section bg-white">
       <div className="container-custom">
@@ -45,7 +42,7 @@ const Team = () => {
         }}>
               {/* Image */}
               <div className="relative overflow-hidden h-72">
-                <img src={member.image} alt={member.name} className="w-full h-full transition-transform duration-500 hover:scale-105 object-cover" />
+                <img src={member.image} alt={member.name} className="w-full h-full transition-transform duration-500 hover:scale-105 object-scale-down" />
               </div>
               
               {/* Content */}
@@ -68,5 +65,4 @@ const Team = () => {
       </div>
     </section>;
 };
-
 export default Team;
