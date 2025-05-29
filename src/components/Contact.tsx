@@ -49,7 +49,7 @@ const Contact = () => {
           
           {/* Phone Card */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="bg-amber-400 p-6 flex items-center justify-center">
+            <div className="bg-[#0086c3] p-6 flex items-center justify-center">
               <Phone className="w-16 h-16 text-white" />
             </div>
             <div className="p-6 text-center">
@@ -66,8 +66,8 @@ const Contact = () => {
           
           {/* Email Card */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-neutral-800 p-6 flex items-center justify-center">
-              <Mail className="w-16 h-16 text-amber-400" />
+            <div className="bg-[#005486] p-6 flex items-center justify-center">
+              <Mail className="w-16 h-16 text-white" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">E-mail</h3>
