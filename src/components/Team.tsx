@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const team = [{
@@ -16,7 +17,7 @@ const team = [{
   id: 3,
   name: 'Julyamilla Oliveira',
   role: 'Engenheira',
-  image: '/lovable-uploads/f6cb11f9-7957-4772-b33e-77c20bf338b6.png',
+  image: '/lovable-uploads/d6a1381d-6131-4499-bb59-27f7c1a02ebe.png',
   delay: '0.2s'
 }];
 
